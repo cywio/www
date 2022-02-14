@@ -1,3 +1,5 @@
+import { SetStateAction } from 'react'
+
 export interface SourceDataType {
 	name: string
 	description: string
@@ -40,4 +42,19 @@ export interface SourceDataType {
 		title: string
 		href: string
 	}>
+}
+
+export interface SpotifySourceType {
+	title: string
+	progress: number
+	artwork: string
+	artists: Array<string>
+	id: string
+}
+
+export interface GlobalContextDefaultValueType {
+	spotify: SpotifySourceType | null
+	setSpotify(props: SpotifySourceType): SetStateAction<SpotifySourceType>
+	data: SourceDataType | null
+	setData(props: SourceDataType): SetStateAction<SourceDataType>
 }
