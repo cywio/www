@@ -1,5 +1,8 @@
 import type { GetStaticPropsResult, NextPage } from 'next'
-import { SourceDataType } from '@types'
+import type { SourceDataType } from '@types'
+import { useContext, useEffect } from 'react'
+import { Container } from '@components'
+import { GlobalContext } from '@state'
 import axios from 'axios'
 
 export const getStaticProps = async (): Promise<GetStaticPropsResult<SourceDataType>> => {
@@ -11,8 +14,20 @@ export const getStaticProps = async (): Promise<GetStaticPropsResult<SourceDataT
 	}
 }
 
-const Home: NextPage<SourceDataType> = () => {
-	return <></>
+const Home: NextPage<SourceDataType> = (props) => {
+	const { setData, setSpotify } = useContext(GlobalContext)
+
+	const getSpotifyData = async () => {
+		let { data } = await axios.get('/api/spotify')
+		setSpotify(data)
+	}
+
+	useEffect(() => {
+		setData(props)
+		getSpotifyData()
+	}, [])
+
+	return <Container></Container>
 }
 
 export default Home
