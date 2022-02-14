@@ -15,7 +15,7 @@ export const Container: NextComponentType = ({ children }) => {
 			<div className='hidden sm:block absolute border-b border-l border-inherit right-0 top-0 p-[14px] h-7 w-7' />
 			<div className='flex flex-col md:flex-row border border-inherit absolute bg-[#e7e9ee] inset-0 sm:inset-7'>
 				<Header title={data?.name} description={data?.description} />
-				<div className='mt-14'>{children}</div>
+				{children}
 			</div>
 		</main>
 	)
