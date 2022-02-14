@@ -1,7 +1,7 @@
 import type { GetStaticPropsResult, NextPage } from 'next'
 import type { SourceDataType } from '@types'
 import { useContext, useEffect } from 'react'
-import { Container } from '@components'
+import { Container, Skills } from '@components'
 import { GlobalContext } from '@state'
 import axios from 'axios'
 import cx from 'classnames'
@@ -37,6 +37,9 @@ const Home: NextPage<SourceDataType> = (props) => {
 				})}
 			>
 				<p>{props.about}</p>
+				<div className='py-6'>
+					<Skills />
+				</div>
 			</div>
 			<div className='border-inherit md:w-1/2 2xl:w-2/3 overflow-auto'>
 				<div className='bg-[url(/img/grid.svg)] h-full w-full bg-repeat bg-center absolute'></div>

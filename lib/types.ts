@@ -31,12 +31,11 @@ export interface SourceDataType {
 		}>
 	}>
 	skills: {
-		languages: Array<string>
-		frontend: Array<string>
-		backend: Array<string>
-		software: Array<string>
-		concepts: Array<string>
-		misc: Array<string>
+		description: string
+		lists: Array<{
+			name: string
+			list: Array<string>
+		}>
 	}
 	links: Array<{
 		title: string

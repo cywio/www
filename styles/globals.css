@@ -53,6 +53,11 @@ a {
 	text-decoration: none;
 }
 
+a:hover,
+summary:hover {
+	color: #ec7631;
+}
+
 * {
 	box-sizing: border-box;
 }
@@ -81,4 +86,12 @@ a {
 
 .spotify-progress-bar:hover::after {
 	height: 3px;
+}
+
+details > summary {
+	list-style-type: '→ ';
+}
+
+details[open] > summary {
+	list-style-type: '↓ ';
 }
