@@ -95,3 +95,7 @@ details > summary {
 details[open] > summary {
 	list-style-type: '↓ ';
 }
+
+[data-has-arrow]::before {
+	content: '→ ';
+}

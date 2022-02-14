@@ -41,6 +41,7 @@ export interface SourceDataType {
 		title: string
 		href: string
 	}>
+	email: string
 }
 
 export interface SpotifySourceType {
