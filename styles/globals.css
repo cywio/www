@@ -1,16 +1,63 @@
+@font-face {
+	font-family: 'II Vorkurs';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url('/fonts/IIVorkurs-Bold.woff');
+}
+
+@font-face {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url('/fonts/Inter-Regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Inter';
+	font-style: italic;
+	font-weight: 400;
+	font-display: swap;
+	src: url('/fonts/Inter-Italic.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url('/fonts/Inter-Bold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Inter';
+	font-style: italic;
+	font-weight: 700;
+	font-display: swap;
+	src: url('/fonts/Inter-BoldItalic.woff') format('woff');
+}
+
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	padding: 0;
+	margin: 0;
+	font-family: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+		Helvetica Neue, sans-serif;
+	font-feature-settings: 'ss01', 'zero', 'ss02';
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.font-vorkurs {
+	font-family: 'II Vorkurs';
+	font-feature-settings: 'aalt' on;
+	font-weight: 700;
 }
