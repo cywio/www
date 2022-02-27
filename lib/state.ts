@@ -6,4 +6,6 @@ export const GlobalContext = createContext<GlobalContextDefaultValueType>({
 	setSpotify: () => ({} as SetStateAction<SpotifySourceType>),
 	data: null,
 	setData: () => ({} as SetStateAction<SourceDataType>),
+	contentView: '',
+	setContentView: () => '',
 })
