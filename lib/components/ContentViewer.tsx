@@ -1,4 +1,4 @@
-import { ContentViewerItem } from '@components'
+import { ContentViewerItem, ContentViewerBackground } from '@components'
 import { GlobalContext } from '@state'
 import { useContext } from 'react'
 import cx from 'classnames'
@@ -28,13 +28,7 @@ export const ContentViewer = () => {
 						</div>
 					)}
 					<h1 className='mt-[calc(2vh)] md:mt-[calc(8vh)] z-10 ml-6 font-vorkurs text-3xl capitalize absolute'>{contentView}</h1>
-					<div
-						data-animate-grid={contentView ? '' : null}
-						className={cx('bg-[url(/img/grid.svg)] w-full bg-repeat bg-center absolute', {
-							['h-screen']: !contentView,
-							['h-[8vh] md:h-[14vh]']: contentView,
-						})}
-					/>
+					<ContentViewerBackground />
 				</div>
 				{contentView && (
 					<div className='border-t border-inherit'>

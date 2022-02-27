@@ -8,6 +8,10 @@ export interface SourceDataType {
 		enabled: true
 		emotes: Array<string>
 	}
+	gameOfLife: {
+		cubeSize: number
+		speed: number
+	}
 	content: Array<{
 		name: string
 		data: Array<{
