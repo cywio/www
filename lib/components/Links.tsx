@@ -17,7 +17,9 @@ export const Links = () => {
 	return (
 		<div className='flex flex-col mt-3 border-t border-[#aab8b8] pt-6'>
 			{data?.links.map((link) => (
-				<NavItem href={link.href}>{link.title}</NavItem>
+				<NavItem key={link.href} href={link.href}>
+					{link.title}
+				</NavItem>
 			))}
 			<NavItem onClick={() => copyEmail()} isActive={copyState}>
 				{copyState ? 'Copied to clipboard!' : 'Email'}

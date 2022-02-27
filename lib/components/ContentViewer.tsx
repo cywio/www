@@ -34,7 +34,7 @@ export const ContentViewer = () => {
 					<div className='border-t border-inherit'>
 						<div className='p-6 py-12 max-w-[1000px] mx-auto'>
 							{contentViewData?.data.map((i) => (
-								<ContentViewerItem data={i} />
+								<ContentViewerItem key={i.title} data={i} />
 							))}
 						</div>
 					</div>

@@ -16,7 +16,7 @@ export const ContentViewerItem = ({ data: i }: { data: any }) => {
 			{i?.images.length !== 0 && (
 				<div className='snap-x flex items-center gap-4 mb-4 overflow-auto'>
 					{i?.images?.map((i: ImageType) => (
-						<div className='snap-center relative group min-w-[600px] border rounded'>
+						<div key={i.src} className='snap-center relative group min-w-[600px] border rounded'>
 							<Image className='w-full aspect-video' src={i.src} alt={String(i.alt)} width={1280} height={720} unoptimized />
 							{i.alt && (
 								<span className='transition opacity-0 group-hover:opacity-100 text-xs p-1.5 px-2 absolute top-0 left-0 m-4 shadow rounded-full bg-white'>

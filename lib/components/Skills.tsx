@@ -11,7 +11,7 @@ export const Skills = () => {
 			<p className='mb-3'>{data?.skills.description}</p>
 			<div className='my-4'>
 				{data?.skills?.lists?.map(({ name, list }) => (
-					<div className='group overflow-auto'>
+					<div key={name} className='group overflow-auto'>
 						<div className='flex lg:flex-row flex-col items-start lg:items-center gap-3 pb-2'>
 							<div className='flex items-center w-full gap-3'>
 								<p className='min-w-max font-bold'>
