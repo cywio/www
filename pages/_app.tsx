@@ -7,10 +7,13 @@ import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
 	const [spotify, setSpotify] = useState<SpotifySourceType>()
+	const [contentView, setContentView] = useState<string>()
 	const [data, setData] = useState<SourceDataType>()
 
 	return (
-		<GlobalContext.Provider value={{ spotify, setSpotify, data, setData } as GlobalContextDefaultValueType}>
+		<GlobalContext.Provider
+			value={{ spotify, setSpotify, data, setData, contentView, setContentView } as GlobalContextDefaultValueType}
+		>
 			<Component {...pageProps} />
 		</GlobalContext.Provider>
 	)

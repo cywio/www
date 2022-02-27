@@ -99,3 +99,53 @@ details[open] > summary {
 [data-has-arrow]::before {
 	content: '→ ';
 }
+
+[data-animate-grid] {
+	animation: grid-animation 120s linear infinite;
+}
+
+@keyframes grid-animation {
+	to {
+		background-position: 200% 0%;
+	}
+}
+
+[data-animate] {
+	opacity: 0;
+	animation: enter 0.6s forwards;
+}
+
+.cover-image-animation {
+	opacity: 0;
+	animation: cover-image-animation 6s infinite;
+}
+
+@keyframes cover-image-animation {
+	0% {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	20% {
+		opacity: 1;
+		transform: none;
+	}
+	80% {
+		opacity: 1;
+		transform: none;
+	}
+	100% {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+}
+
+@keyframes enter {
+	0% {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}

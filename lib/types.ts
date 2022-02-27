@@ -8,26 +8,18 @@ export interface SourceDataType {
 		enabled: true
 		emotes: Array<string>
 	}
-	projects: Array<{
-		title: string
-		description: string
-		timeline: Array<Date | null>
-		url: string
-		repo: string
-		images: Array<{
-			src: string
-			alt: string | null
-		}>
-	}>
-	work: Array<{
-		title: string
-		description: string
-		timeline: Array<Date | null>
-		url: string
-		repo: string
-		images: Array<{
-			src: string
-			alt: string | null
+	content: Array<{
+		name: string
+		data: Array<{
+			title: string
+			description: string
+			timeline: Array<Date | null>
+			url: string
+			repo: string
+			images: Array<{
+				src: string
+				alt: string | null
+			}>
 		}>
 	}>
 	skills: {
@@ -57,4 +49,6 @@ export interface GlobalContextDefaultValueType {
 	setSpotify(props: SpotifySourceType): SetStateAction<SpotifySourceType>
 	data: SourceDataType | null
 	setData(props: SourceDataType): SetStateAction<SourceDataType>
+	contentView: string
+	setContentView(props: string | null): SetStateAction<string | null>
 }
